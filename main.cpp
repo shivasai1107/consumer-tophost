@@ -3,6 +3,7 @@
 #endif
 
 #include <caputils/caputils.h>
+#include <caputils/packet.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -295,7 +296,7 @@ int main(int argc, char* argv[]){
 			break;
 		}
 
-		const struct ip* ip = find_ipv4_header(cp->ethhdr);
+		const struct ip* ip = find_ipv4_header(cp->ethhdr,0);
 		if ( !ip ){
 			continue;
 		}
