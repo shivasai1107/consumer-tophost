@@ -17,7 +17,7 @@ clean:
 dist:	owd-$(rev).tar.gz
 
 install: all
-	install -m 0755 oneway $(PREFIX)/bin
+	install -m 0755 tophost $(PREFIX)/bin
 
 tophosts-$(rev).tar.gz:
 	git archive --prefix=owd-$(rev)/ -o tophosts-$(rev).tar.gz master
